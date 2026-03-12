@@ -1,0 +1,50 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0b0d12;
+  --surface:  #13151c;
+  --surface2: #1a1d27;
+  --border:   #252836;
+  --accent:   #6c63ff;
+  --accent2:  #00d4aa;
+  --text:     #eaeaf0;
+  --muted:    #5a5d78;
+  --danger:   #ff4f6a;
+  --green:    #00d4aa;
+  --font:     'Outfit', sans-serif;
+  --mono:     'JetBrains Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Drag region for frameless window */
+.drag-region { -webkit-app-region: drag; }
+.no-drag     { -webkit-app-region: no-drag; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position:  200% center; }
+}
