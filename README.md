@@ -148,4 +148,4 @@ Here is a step-by-step guide on how to use GestureFlow once it is installed and 
 
 ---
 
-*Made by Mouli.*
+*Made by Mouli Ritchie.*
